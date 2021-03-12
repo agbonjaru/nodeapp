@@ -6,6 +6,13 @@ node {
      commit_id = readFile('.git/commit-id').trim()
    }
    
+   stage('Install dependencies'){
+     steps{
+            
+       sh 'npm install'
+       }
+   }
+
    stage('docker build/push') {
      docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
        def app = docker.build("jstryngs/ren-nodejs:${commit_id}", '.').push()
