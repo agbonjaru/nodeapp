@@ -7,9 +7,9 @@ node {
    }
    
    stage('Install dependencies') {
-     steps{
+     
        sh 'npm install'
-       }
+       
    }
 
    stage('docker build/push') {
