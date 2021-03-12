@@ -16,8 +16,8 @@ node {
 
    stage('Start Service') {
 
-//    sh "docker-compose up -d --build --force-recreate ren_nodeapp"
-      sh "docker-compose up -d"
+    sh "docker-compose up -d --build --force-recreate ren_nodeapp"
+//      sh "docker-compose up -d"
       
     }
 
