@@ -8,14 +8,17 @@ services:
       - "50000:50000"
     volumes:
       - "/var/jenkins_home:/var/jenkins_home"
-      - "/usr/bin/docker-compose:/usr/bin/docker-compose"
+      - "/var/run/docker.sock:/var/run/docker.sock"
     networks: 
       - net
   
   ren_nodeapp:
-     container_name: ren-nodeapp
-     image: jstryngs/ren-nodejs
-     ports:
+    container_name: ren-nodeapp
+    image: jstryngs/ren-nodejs
+    ports:
       - "5000:5000"
+    networks:
+      - net
+
 networks:
   net:
