@@ -1,17 +1,17 @@
 version: '3'
 services: 
-  jenkins:
-    container_name: devops-jenkins
-    image: jstryngs/jenkins-docker
-    ports:
-      - "8080:8080"
-      - "50000:50000"
-    volumes:
-      - "/var/jenkins_home:/var/jenkins_home"
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - "/home/ubuntu/nodeapp:/home/ubuntu/nodeapp"
-    networks: 
-      - net
+#  jenkins:
+#   container_name: devops-jenkins
+#    image: jstryngs/jenkins-docker
+ #   ports:
+ #     - "8080:8080"
+ #     - "50000:50000"
+ #   volumes:
+ #     - "/var/jenkins_home:/var/jenkins_home"
+ #     - "/var/run/docker.sock:/var/run/docker.sock"
+ #     - "/home/ubuntu/nodeapp:/home/ubuntu/nodeapp"
+ #   networks: 
+ #     - net
   
   ren_nodeapp:
     container_name: ren-nodeapp
